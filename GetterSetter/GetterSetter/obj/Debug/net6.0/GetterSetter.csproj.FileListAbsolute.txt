@@ -1,0 +1,15 @@
+C:\Users\Sho\source\repos\GetterSetter\GetterSetter\obj\Debug\net6.0\GetterSetter.csproj.AssemblyReference.cache
+C:\Users\Sho\source\repos\GetterSetter\GetterSetter\obj\Debug\net6.0\GetterSetter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sho\source\repos\GetterSetter\GetterSetter\obj\Debug\net6.0\GetterSetter.AssemblyInfoInputs.cache
+C:\Users\Sho\source\repos\GetterSetter\GetterSetter\obj\Debug\net6.0\GetterSetter.AssemblyInfo.cs
+C:\Users\Sho\source\repos\GetterSetter\GetterSetter\obj\Debug\net6.0\GetterSetter.csproj.CoreCompileInputs.cache
+C:\Users\Sho\source\repos\GetterSetter\GetterSetter\bin\Debug\net6.0\GetterSetter.exe
+C:\Users\Sho\source\repos\GetterSetter\GetterSetter\bin\Debug\net6.0\GetterSetter.deps.json
+C:\Users\Sho\source\repos\GetterSetter\GetterSetter\bin\Debug\net6.0\GetterSetter.runtimeconfig.json
+C:\Users\Sho\source\repos\GetterSetter\GetterSetter\bin\Debug\net6.0\GetterSetter.dll
+C:\Users\Sho\source\repos\GetterSetter\GetterSetter\bin\Debug\net6.0\GetterSetter.pdb
+C:\Users\Sho\source\repos\GetterSetter\GetterSetter\obj\Debug\net6.0\GetterSetter.dll
+C:\Users\Sho\source\repos\GetterSetter\GetterSetter\obj\Debug\net6.0\refint\GetterSetter.dll
+C:\Users\Sho\source\repos\GetterSetter\GetterSetter\obj\Debug\net6.0\GetterSetter.pdb
+C:\Users\Sho\source\repos\GetterSetter\GetterSetter\obj\Debug\net6.0\GetterSetter.genruntimeconfig.cache
+C:\Users\Sho\source\repos\GetterSetter\GetterSetter\obj\Debug\net6.0\ref\GetterSetter.dll
