@@ -10,8 +10,8 @@ public class Program
     static ArrayList email = new ArrayList();
     static ArrayList usernameSignup = new ArrayList();
     static ArrayList passwordSignup = new ArrayList();
-    static String username = "";
-    static String pass = "";
+    static String username, pass;
+    static int select;
 
     public static void Main()
     {
@@ -52,8 +52,10 @@ public class Program
                 {
                     if (username.Equals(usernameSignup[i]) && pass.Equals(passwordSignup[i]))
                     {
-                        Console.Write("Welcome back! @"+name[i] + "\n");
-                        break;
+                        Console.Write("Welcome back! @"+usernameSignup[i] + "\n");
+                        Console.WriteLine("Name: " + name[i] + "\nAge: " + age[i] + "\nGender: " + 
+                            gender[i] + "\nBirthday: " + birthdate[i] + "\nEmail: " + email[i] + "\n \n");
+                        whileLoggedIn();
                     }
                     else
                     {
@@ -68,32 +70,89 @@ public class Program
         }
     }
 
+    public static void whileLoggedIn()
+    {
+        while(select != 5)
+        {
+            Console.WriteLine("[1] : Update Account Password \n[2] : Update Account Username \n[3] Delete Account \n[4] Search User \nChoice: ");
+            select = Convert.ToInt32(Console.ReadLine());
+
+            switch (select)
+            {
+                case 1:
+                    Console.Write("Enter Old Passoword: ");
+                    String oldpass = Console.ReadLine();
+                    Console.Write("Enter new Passoword: ");
+                    String newpass = Console.ReadLine();
+                    for(int i = 0; i<passwordSignup.Count; i++)
+                    {
+                        if (oldpass.Equals(passwordSignup[i]))
+                        {
+                            passwordSignup.Remove(passwordSignup[i]);
+                            passwordSignup.Add(newpass);
+                            Login();
+                        }
+                        else
+                        {
+                            Console.Write("Invalid Credentials\n \n");
+                        }
+                    }
+                    break;
+
+                case 2:
+                    Console.Write("Enter Old Username: ");
+                    username = Console.ReadLine();
+                    Console.Write("Enter New Username: ");
+                    String newUsername = Console.ReadLine();
+                    for (int i = 0; i < usernameSignup.Count; i++)
+                    {
+                        if (username.Equals(usernameSignup[i]))
+                        {
+                            usernameSignup.Remove(usernameSignup[i]);
+                            usernameSignup.Add(newUsername);
+                            Login();
+                        }
+                        else
+                        {
+                            Console.Write("Invalid Credentials\n \n");
+                        }
+                    }
+                    break;
+                case 3: Console.Write("Do you want to delete this account? Y / n ?: ");
+                    char yn = Convert.ToChar(Console.ReadLine());
+                    for(int a = 0; a<name.Count; a++)
+                    {
+                        if(yn == 'y')
+                        {
+                            name.Clear();
+                            usernameSignup.Clear();
+                            Login();
+                        }
+                    }break;
+            }
+        }
+    }
+
+
     public static void mainfunction() {
         while (true) {
-            Console.WriteLine("Press (s) for signup and (l) for Login");
-            char select = Convert.ToChar(Console.ReadLine());
-
-            if (select.Equals(""))
-            {
-                continue;
-            }
-            else if (select.Equals("exit"))
-            {
-                break;
-            }
-            else {
-
+            Console.WriteLine("[1] : Sign-Up or Create Account \n[2] : Login");
+            select = Convert.ToInt32(Console.ReadLine());  
                 switch (select)
                 {
-                    case 's':
+                    case 1:
                         signup();
                         break;
-                    case 'l':
+                    
+                    case 2:
                         Login();
                         break;
+                    
+                    case 3:
+                    Environment.Exit(0);
+                    break;
                 }
                 
             }
         }
-    }
-}
+ }
